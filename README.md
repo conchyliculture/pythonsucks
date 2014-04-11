@@ -28,4 +28,4 @@ Why do you need to give a pointer to the class instance to the constructor ????
                    
 #### The great colon illusion
 
-![ScreenShot](/sc/colon_lien.png)
+![ScreenShot](/sc/colon_lie.png)
