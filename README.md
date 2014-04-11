@@ -35,4 +35,20 @@ Best example of the "it's for your own good" illusion. This is a screenshot from
 
 Can you spot the lie? They tell you how colons are great for lisibility and give you an example... very biased. The one with the colon has syntax highlighting on.
 
+#### The shame of no switch
 
+This is fugly, and looks like  kindergarden programming:
+
+    if x == 'first state':
+            ...
+        elif x == 'second state':
+            ...
+        elif x == 'third state':
+            ...
+        elif x == 'fourth state':
+            ...
+        else:
+            # default handling
+            ...
+
+but again, not THAT much different with a good old switch case. What's hilarious is [the reason](http://legacy.python.org/dev/peps/pep-3103/#rejection-notice) for not adding the switch/case syntax: a quick handvote at PyCon 2007. All Hail Guido! 
