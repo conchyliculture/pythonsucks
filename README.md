@@ -28,4 +28,11 @@ Why do you need to give a pointer to the class instance to the constructor ????
                    
 #### The great colon illusion
 
+Best example of the "it's for your own good" illusion. This is a screenshot from
+ [python docs site](https://docs.python.org/2/faq/design.html#why-are-colons-required-for-the-if-while-def-class-statements) :
+
 ![ScreenShot](/sc/colon_lie.png)
+
+Can you spot the lie? They tell you how colons are great for lisibility and give you an example... very biased. The one with the colon has syntax highlighting on.
+
+
