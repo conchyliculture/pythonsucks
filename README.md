@@ -56,4 +56,5 @@ but again, not THAT much different from a nice switch/case. What's hilarious is 
 #### The object guilt
 
 Python doesn't really want to be an object oriented language:
+
   len([1,2,3])  calls [1,2,3].__len__()
