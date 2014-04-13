@@ -89,4 +89,42 @@ Handling weird characters is hard. All languages have their own caveats, but few
     $PYTHONIOENCODING="utf-8" python -c "print u'\u03ba\u03c1\u03b1\u03b6\u03b9\u03bd\u03b5\u03c3\u03c2'" | head
     κραζινεσς
 
+#### <a name="re">The regex confusion
 
+`import re` opens a whole new world of pain. Try to simply parse a file with it.
+
+    endpageRE=re.compile(r'^\s*<\/page>\s*$')
+    idRE=re.compile(r'^\s*<id>(\d+)<\/id>\s*$')
+    startpageRE=re.compile(r'^\s*<page>\s*$')
+    titleRE=re.compile(r'^\s*<title>(.+)<\/title>\s*')
+    revisionRE=re.compile(r'\s*<revision>$')
+    curpos=0
+    for line in inputstream:
+        lol_python_is_shit=endpageRE.match(line)
+        if lol_python_is_shit!=None:
+            ...
+            next
+
+        seriously_what_am_i_doing=idRE.match(line)
+        if seriously_what_am_i_doing!=None:
+            ...
+            next
+
+        get_me_out_of_here=startpageRE.match(line)
+        if get_me_out_of_here!=None:
+            ...
+            start=curpos
+            id_=0
+            next
+
+        this_can_t_be_happening=titleRE.match(line)
+        if this_can_t_be_happening!=None:
+            ...
+            title=this_can_t_be_happening.group(1)
+            ...
+            next
+
+        when_will_this_craziness_end=revisionRE.match(line)
+        if when_will_this_craziness_end!=None:
+            ...
+            next
