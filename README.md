@@ -52,3 +52,8 @@ This is fugly, and looks like  kindergarden programming:
             ...
 
 but again, not THAT much different from a nice switch/case. What's hilarious is [the reason](http://legacy.python.org/dev/peps/pep-3103/#rejection-notice) for not adding the switch/case syntax: a quick handvote at PyCon 2007. All Hail Guido! 
+
+#### The object guilt
+
+Python doesn't really want to be an object oriented language:
+  len([1,2,3])  calls [1,2,3].__len__()
