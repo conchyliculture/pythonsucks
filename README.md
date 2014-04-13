@@ -57,4 +57,15 @@ but again, not THAT much different from a nice switch/case. What's hilarious is 
 
 Python doesn't really want to be an object oriented language:
 
-  len([1,2,3])  calls [1,2,3].__len__()
+    len([1,2,3]) just calls .__len__()
+
+So why not just use a single .len() method? [Guido](https://mail.python.org/pipermail/python-3000/2006-November/004643.html) says len() is "special" and those builtin operation are easier to read.
+
+Python is still not a nice object oriented language:
+
+    >>> int(str(len([1,2,3])))
+    3
+    >>> [1,2,3].__len__().__str__().__int__()
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+      AttributeError: 'str' object has no attribute '__int__'
