@@ -69,6 +69,33 @@ Python is still not a nice object oriented language:
       File "<stdin>", line 1, in <module>
       AttributeError: 'str' object has no attribute '__int__'
 
+Of course things get worse when you try "advanced" stuff like sorting:
+
+    In [10]: a =[4,3,5]
+    In [11]: a.sort()
+    In [12]: a
+    Out[12]: [3, 4, 5]
+
+What ?! it doesn't return itself ?
+So you can't write :
+
+   a.sort().pop()
+ 
+OK, lets try on a dict :
+
+    In [17]: a={1: 'D', 2: 'B', 3: 'B', 4: 'E', 5: 'A'}
+    In [18]: a.sort()
+    VAttributeError: 'dict' object has no attribute 'sort'
+
+... apparently you have to use the super object oriented builtin "sorted".
+Let's try :
+
+    In [19]: sorted(a)
+    Out[19]: [1, 2, 3, 4, 5]
+
+No comment.
+
+
 #### <a name="doc"/>The documentation fluster
 
 Python's documentation is just a huge concatenation of `__doc__()` and a bunch of howtos. Try to find a description of the object `ValueError` (a common Exception).  
