@@ -11,7 +11,9 @@ There is no way to avoid it, it's all around me, it wants me to suffer.
 
 So this place will provide some anger management.
 
-## import wtf
+## Python hates you
+
+First part dedicated to python core and stdlib
 
 #### <a name="self"/> The self. plague
 
@@ -116,6 +118,10 @@ Handling weird characters is hard. All languages have their own caveats, but few
     $PYTHONIOENCODING="utf-8" python -c "print u'\u03ba\u03c1\u03b1\u03b6\u03b9\u03bd\u03b5\u03c3\u03c2'" | head
     κραζινεσς
 
+## import wtf
+
+Extra crazyness comes with extra imports
+
 #### <a name="re">The regex confusion
 
 `import re` opens a whole new world of pain. Try to simply parse a file with it.
@@ -155,3 +161,11 @@ Handling weird characters is hard. All languages have their own caveats, but few
         if when_will_this_craziness_end!=None:
             ...
             next
+
+#### <a name="rfc3986"> Can I haz RFC3986 validation
+
+If you want to parse valid URI only, you're out of luck with the stdlib.
+
+    from urlparse import urlparse
+    In [2]: urlparse("£:&  :!!!!!!!! BEST ?    URL&&&&&  EV444444 @@@@@@    htt://   ")
+    Out[2]: ParseResult(scheme='', netloc='', path='\xc2\xa3:&  :!!!!!!!! BEST ', params='', query='    URL&&&&&  EV444444 @@@@@@    htt://   ', fragment='')
