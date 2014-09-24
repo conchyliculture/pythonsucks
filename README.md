@@ -175,14 +175,18 @@ If you want to parse valid URI only, you're out of luck with the stdlib.
 #### <a name="pathjoin"> os.path.join joins... sometimes
 
 From the [doc](https://docs.python.org/2/library/os.path.html#os.path.join) :
-     If any component is an absolute path, all previous components ([...]) are thrown away, and joining continues.
+
+<< If any component is an absolute path, all previous components ([...]) are thrown away, and joining continues. >>
 
     $ python -c "import os; print os.path.join('/tmp','/lolwrong')"
     /lolwrong
 
 Python v3 [doc](https://docs.python.org/3/library/os.path.html#os.path.join) is even more annoying :
-    Join one or more path components intelligently. If any component is an absolute path [...]
+
+<< Join one or more path components intelligently. If any component is an absolute path [...] >>
+
 OMG INTELLIGENCE:
+
     $ python -c "import os; print os.path.join([])"
     []
     $ python -c "import os; print os.path.join(False)"
