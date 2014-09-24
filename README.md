@@ -169,3 +169,11 @@ If you want to parse valid URI only, you're out of luck with the stdlib.
     from urlparse import urlparse
     In [2]: urlparse("£:&  :!!!!!!!! BEST ?    URL&&&&&  EV444444 @@@@@@    htt://   ")
     Out[2]: ParseResult(scheme='', netloc='', path='\xc2\xa3:&  :!!!!!!!! BEST ', params='', query='    URL&&&&&  EV444444 @@@@@@    htt://   ', fragment='')
+
+#### <a name="pathjoin"> os.path.join joins... sometimes
+
+From the [doc](https://docs.python.org/2/library/os.path.html#os.path.join) :
+     If any component is an absolute path, all previous components ([...]) are thrown away, and joining continues.
+
+    $ python -c "import os; print os.path.join('/tmp','/lolwrong')"
+    /lolwrong
