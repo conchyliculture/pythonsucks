@@ -179,3 +179,13 @@ From the [doc](https://docs.python.org/2/library/os.path.html#os.path.join) :
 
     $ python -c "import os; print os.path.join('/tmp','/lolwrong')"
     /lolwrong
+
+Python v3 [doc](https://docs.python.org/3/library/os.path.html#os.path.join) is even more annoying :
+    Join one or more path components intelligently. If any component is an absolute path [...]
+OMG INTELLIGENCE:
+    $ python -c "import os; print os.path.join([])"
+    []
+    $ python -c "import os; print os.path.join(False)"
+    False
+    $ python -c "import os; print os.path.join(os.path.join)"
+    <function join at 0x7fe203269ed8>
