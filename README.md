@@ -193,3 +193,5 @@ OMG INTELLIGENCE:
     False
     $ python -c "import os; print os.path.join(os.path.join)"
     <function join at 0x7fe203269ed8>
+
+And I'm not the only one being fooled by crazy methods : [arbitrary file upload vulnerability in Cuckoo Sandbox](http://cuckoosandbox.org/2014-10-07-cuckoo-sandbox-111.html) was caused by it.
