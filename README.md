@@ -125,7 +125,7 @@ Let's try :
 
 No comment.
 
-#### <a name="join">The join foolishness
+#### <a name="join"/>The join foolishness
 
 From what I understand from reading [this thread about string methods](https://mail.python.org/pipermail/python-dev/1999-June/095366.html) being coded into Python, the language developer decided that since Python isn't an object oriented language, it was easier (as in 'no need to re-code a join method for different collection structures') to just code the `join()` method that way :
 
@@ -140,7 +140,7 @@ Fortunately Python doesn't make you do:
 Python's documentation is just a huge concatenation of `__doc__()` and a bunch of howtos. Try to find a description of the object `ValueError` (a common Exception).  
 It also contains treachery (see [colon](#colon)).
 
-#### <a name="unicode">The unicode failure
+#### <a name="unicode"/>The unicode failure
 
 Handling weird characters is hard. All languages have their own caveats, but few of them make me as angry as python.
 
@@ -159,7 +159,7 @@ Handling weird characters is hard. All languages have their own caveats, but few
 
 Extra crazyness comes with extra imports
 
-#### <a name="re">The regex confusion
+#### <a name="re"/>The regex confusion
 
 `import re` opens a whole new world of pain. Try to simply parse a file with it.
 
@@ -201,7 +201,7 @@ Extra crazyness comes with extra imports
             ...
             next
 
-#### <a name="rfc3986"> Can I haz RFC3986 validation
+#### <a name="rfc3986"/> Can I haz RFC3986 validation
 
 If you want to parse valid URI only, you're out of luck with the stdlib.
 
@@ -209,7 +209,7 @@ If you want to parse valid URI only, you're out of luck with the stdlib.
     In [2]: urlparse("£:&  :!!!!!!!! BEST ?    URL&&&&&  EV444444 @@@@@@    htt://   ")
     Out[2]: ParseResult(scheme='', netloc='', path='\xc2\xa3:&  :!!!!!!!! BEST ', params='', query='    URL&&&&&  EV444444 @@@@@@    htt://   ', fragment='')
 
-#### <a name="pathjoin"> os.path.join joins... sometimes
+#### <a name="pathjoin"/> os.path.join joins... sometimes
 
 From the [doc](https://docs.python.org/2/library/os.path.html#os.path.join) :
 
