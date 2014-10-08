@@ -233,4 +233,4 @@ OMG INTELLIGENCE:
 
 And I'm not the only one being fooled by crazy methods : [arbitrary file upload vulnerability in Cuckoo Sandbox](http://cuckoosandbox.org/2014-10-07-cuckoo-sandbox-111.html) was caused by it.
 
-By the way, people who commited that method, forgot to be pythonic (see (join)[#join]).
+By the way, people who commited that method, forgot to be pythonic (see [join()](#join)).
