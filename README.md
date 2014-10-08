@@ -125,6 +125,15 @@ Let's try :
 
 No comment.
 
+#### <a name="join">The join foolishness
+
+From what I understand from reading [this thread about string methods](https://mail.python.org/pipermail/python-dev/1999-June/095366.html) being coded into Python, the language developer decided that since Python isn't an object oriented language, it was easier (as in 'no need to re-code a join method for different collection structures') to just code the `join()` method that way :
+
+    sep.join(iterable)
+
+Fortunately Python doesn't make you do:
+
+    "|".split("a|b|c|d")
 
 #### <a name="doc"/>The documentation fluster
 
@@ -223,3 +232,5 @@ OMG INTELLIGENCE:
     <function join at 0x7fe203269ed8>
 
 And I'm not the only one being fooled by crazy methods : [arbitrary file upload vulnerability in Cuckoo Sandbox](http://cuckoosandbox.org/2014-10-07-cuckoo-sandbox-111.html) was caused by it.
+
+By the way, people who commited that method, forgot to be pythonic (see (join)[#join]).
