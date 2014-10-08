@@ -13,7 +13,35 @@ So this place will provide some anger management.
 
 ## Python hates you
 
-First part dedicated to python core and stdlib
+First part dedicated to python core, the stdlib comes next.
+
+
+#### <a name="space"/> The space fascism
+
+Did you ever want to program in a language where whitespaces have a meaning in the grammar? You can code in [Whitespace](http://en.wikipedia.org/wiki/Whitespace_%28programming_language%29), or in Python.
+
+Have you ever copypasted whitespaces to ensure code will run? Welcome to Python.
+
+A wonderful world where you can't just hack some script without being sure your text editor is the same as the one used originally for that script. Maybe because Python developpers are all old geezers used to programming with punch card.
+
+But at least Fortran was coherent in fascism : 6th column for everyone
+
+Want to quickly test that if `something` is  ̀False` without having to recreate your database?
+
+    if something:
+        print "Okay"
+    else:
+        drop_all_databases()
+    
+    other_stuff
+
+.... then just don't comment the line or you'll get 
+
+      File "lol.py", line 6
+           other_stuff
+                     ^
+    IndentationError: expected an indented block
+
 
 #### <a name="self"/> The self. plague
 
