@@ -57,8 +57,22 @@ Why do you need to give a pointer to the class instance to the constructor ????
       def __init__(self):
                    ^^^^   DAFUCK
                    
-                   
-#### <a name="colon"/>The great colon illusion
+#### <a name="break"/> Breaking bad
+
+It looks like there is no way to do a while loop, with the condition tested after the first loop, like so:
+
+    do:
+        something()
+    while condition
+
+The "python" way is ugly:
+
+    while True:
+        something()
+        if condition:
+            break
+
+#### <a name="colon"/> The great colon illusion
 
 Best example of the "it's for your own good" illusion. This is a screenshot from
  [python docs site](https://docs.python.org/2/faq/design.html#why-are-colons-required-for-the-if-while-def-class-statements) :
