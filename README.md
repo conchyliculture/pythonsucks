@@ -5,11 +5,14 @@ It's a shame. But unfortunately the world loves Python.
 
 There is no way to avoid it, it's all around me, it wants me to suffer.
 
+So this place will provide some anger management.
+
+> This is a list of stuff, in no particular order
+> that annoy non-python zealots !
+
 *C'est pas parcequ'ils sont nombreux à avoir tort qu'ils ont raison*
                                -- Coluche
 
-
-So this place will provide some anger management.
 
 ## Python hates you
 
