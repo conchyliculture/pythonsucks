@@ -172,6 +172,24 @@ Handling weird characters is hard. All languages have their own caveats, but few
     $PYTHONIOENCODING="utf-8" python -c "print u'\u03ba\u03c1\u03b1\u03b6\u03b9\u03bd\u03b5\u03c3\u03c2'" | head
     κραζινεσς
 
+#### <a name="range"/>Shooting range
+
+    $ for i in `seq 0 10` ; do echo -n "$i " ; done
+    0 1 2 3 4 5 6 7 8 9 10 
+    $ ruby -e "print 0.upto(10).to_a"
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    $ ruby -e "(0..10).each {|i| print \"#{i} \"}"
+    0 1 2 3 4 5 6 7 8 9 10 
+    $ python -c "print range(0,10)"
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+This makes sense in Python's world, where the developper is a noob and we want to squeeze him in a little cage
+where he won't do off by one errors when he wants to
+    
+    for hate in range(len(facsism)):
+        ....
+
+
 ## import wtf
 
 Extra crazyness comes with extra imports
