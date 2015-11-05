@@ -1,6 +1,13 @@
 pythonsucks
 ===========
 
+Until you can become this guy
+
+![jake](/sc/jake_snake.jpg)
+
+
+you have to do a lot of Python Wrestling.
+
 It's a shame. But unfortunately the world loves Python.
 
 There is no way to avoid it, it's all around me, it wants me to suffer.
