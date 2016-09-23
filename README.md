@@ -196,6 +196,28 @@ where he won't do off by one errors when he wants to
     for hate in range(len(facsism)):
         ....
 
+#### <a name=""/> Helping hand
+
+    class A(object):                                                                
+        def __init__(self, race=None,lol=None):                                        
+            pass                                                                        
+
+    class B(A):                                                                      
+        def __init__(self, race, lol=None):                                            
+            super(B, self).__init__(race, lol=lol)                                      
+    B(lol=None)
+
+    TypeError: __init__() takes at least 2 arguments (2 given)
+
+The code is buggy, yes, and Python will just be a little bitch about it.
+
+In a more condensed and unreadable form:
+
+    (lambda x,y='': None)(y='')
+
+    <lambda>() takes at least 1 argument (1 given)
+
+Python takes at least 0 fuck (0 given).
 
 ## import wtf
 
