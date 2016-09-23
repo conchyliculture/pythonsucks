@@ -52,6 +52,24 @@ Want to quickly test that if `something` is  ̀False` without having to recreate
                      ^
     IndentationError: expected an indented block
 
+It also makes logic debugging horrible.
+
+    def yourLifeIsMiserable:
+      for machin in chie:
+        if something:
+          ....
+          haha() 
+          ....
+        else:
+          if this_is_fun:
+            ....
+            kill_yourself
+            ...
+            ...
+      yield fail
+
+Did you notice the yield line needs 2 more spaces?
+ 
 
 #### <a name="self"/> The self. plague
 
