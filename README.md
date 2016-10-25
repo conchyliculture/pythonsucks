@@ -182,6 +182,17 @@ Fortunately Python doesn't make you do:
 Python's documentation is just a huge concatenation of `__doc__()` and a bunch of howtos. Try to find a description of the object `ValueError` (a common Exception).  
 It also contains treachery (see [colon](#colon)).
 
+#### <a name="false"/>Falsehood
+
+Do you expect a 72 bytes object to be evaluated as False ? Well Python does. Like PHP and Javascript, an empty string, or anything with a 0 length will be evaluated as False for some reason.
+
+    if u'':
+      print u'No.'
+    else:
+      print u'This is driving me crazy' 
+
+False should be your language NULL and zero, basta. Like any sane language like C++ Java or Ruby.
+
 #### <a name="unicode"/>The unicode failure
 
 Handling weird characters is hard. All languages have their own caveats, but few of them make me as angry as python.
