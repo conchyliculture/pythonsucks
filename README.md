@@ -327,3 +327,38 @@ OMG INTELLIGENCE:
 And I'm not the only one being fooled by crazy methods : [arbitrary file upload vulnerability in Cuckoo Sandbox](http://cuckoosandbox.org/2014-10-07-cuckoo-sandbox-111.html) was caused by it.
 
 By the way, people who commited that method, forgot to be pythonic (see [join()](#join)).
+
+#### <a name="zipfail"> import zipfail
+
+zipfile doesn't care about symlinks, and will do weird stuff with them.
+
+    $ mkdir lol
+    $ echo "lolilol" > lol/wtfpython
+    $ ln -s wtfpython lol/symlink
+    $ ls -l lol
+    total 4
+    lrwxrwxrwx symlink -> wtfpython
+    -rw-r----- wtfpython
+
+    $ python -m zipfile -c noob.zip lol
+    $ python -m zipfile -e noob.zip noob
+    $ ls -l noob/lol/
+    total 8
+    -rw-r----- symlink
+    -rw-r----- wtfpython
+
+    $ zip -r noob.zip lol
+    adding: lol/ (stored 0%)
+    adding: lol/wtfpython (stored 0%)
+    adding: lol/symlink (stored 0%)
+    $ python -m zipfile -e noob.zip noob
+    Traceback (most recent call last):
+      File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+        "__main__", fname, loader, pkg_name)
+      File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+        exec code in run_globals
+      File "/usr/lib/python2.7/zipfile.py", line 1527, in <module>
+        main()
+      File "/usr/lib/python2.7/zipfile.py", line 1505, in main
+        with open(tgt, 'wb') as fp:
+    IOError: [Errno 21] Is a directory: 'noob/lol/'
