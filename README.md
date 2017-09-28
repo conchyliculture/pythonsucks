@@ -266,31 +266,31 @@ Extra crazyness comes with extra imports
 
     for line in inputstream:
         lol_python_is_shit = endpageRE.match(line)
-        if lol_python_is_shit != None:
+        if lol_python_is_shit:
             ...
             next
 
         seriously_what_am_i_doing = idRE.match(line)
-        if seriously_what_am_i_doing != None:
+        if seriously_what_am_i_doing:
             ...
             next
 
         get_me_out_of_here = startpageRE.match(line)
-        if get_me_out_of_here != None:
+        if get_me_out_of_here:
             ...
             start = curpos
             id_ = 0
             next
 
         this_can_t_be_happening = titleRE.match(line)
-        if this_can_t_be_happening != None:
+        if this_can_t_be_happening:
             ...
             title = this_can_t_be_happening.group(1)
             ...
             next
 
         when_will_this_craziness_end = revisionRE.match(line)
-        if when_will_this_craziness_end != None:
+        if when_will_this_craziness_end:
             ...
             next
 
